@@ -2,7 +2,7 @@ const taskInput = document.getElementById("taskInput");
 const addBtn = document.getElementById("addBtn");
 const taskList = document.getElementById("taskList");
 
-// Load tasks from localStorage
+// Load tasks when page loads
 document.addEventListener("DOMContentLoaded", loadTasks);
 
 addBtn.addEventListener("click", addTask);
@@ -23,7 +23,6 @@ function createTaskElement(text) {
     const li = document.createElement("li");
     li.textContent = text;
 
-    // Delete button
     const deleteBtn = document.createElement("button");
     deleteBtn.textContent = "❌";
     deleteBtn.style.marginLeft = "10px";
