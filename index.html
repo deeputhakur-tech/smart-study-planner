@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Study Planner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>📚 Smart Study Planner</h1>
+        <button class="dark-btn" onclick="toggleDarkMode()">🌙 Dark Mode</button>
+
+        <!-- Add Task Form -->
+        <div class="task-form">
+            <input type="text" id="taskInput" placeholder="Enter task title">
+            
+            <select id="priority">
+                <option value="Low">Low Priority</option>
+                <option value="Medium">Medium Priority</option>
+                <option value="High">High Priority</option>
+            </select>
+
+            <input type="date" id="deadline">
+
+            <button onclick="addTask()">Add Task</button>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="filters">
+            <button onclick="filterTasks('all')">All</button>
+            <button onclick="filterTasks('completed')">Completed</button>
+            <button onclick="filterTasks('pending')">Pending</button>
+        </div>
+
+        <!-- Task List -->
+        <ul id="taskList"></ul>
+
+        <!-- Progress Bar -->
+        <div class="progress-container">
+            <div id="progressBar"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
