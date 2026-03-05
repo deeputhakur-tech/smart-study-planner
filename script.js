@@ -55,3 +55,4 @@ function removeTask(task) {
     tasks = tasks.filter(t => t !== task);
     localStorage.setItem("tasks", JSON.stringify(tasks));
 }
+
